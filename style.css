@@ -87,7 +87,7 @@ body{
   
 }
 .badge{
-    background-color: #fff;
+    background-color: white;
     border: none;
     border-radius: 100px;
     padding: 0.25rem 1rem;
@@ -158,6 +158,11 @@ body{
     justify-content:center ;
     
 }
+.back-icon{
+    margin-top: 9px;
+    width: 2rem;
+   }
+
 
 .nav-item{
     margin-right: 1rem;
@@ -165,6 +170,7 @@ body{
 .sticky-nav-details i{
     margin-right: 0.5rem;
 }
+
 .music-container{
     background-color: #121212;
 }
@@ -300,16 +306,12 @@ a{
     .lib-option a{
         font-size: 13px;  
     }
-    .icons{
+    /* .icons{
         display: none;
-    }
-    .sticky-nav{
-        overflow: hidden; /* or any desired value like 'auto' */
-        white-space: nowrap; /* prevents text from wrapping */
-        text-overflow: ellipsis; /* adds ellipsis (...) for overflow */ 
-    }
+    } */
     .card{
-        width: 9rem;
+        width: 8rem;
+        margin-left: 0.2rem;
     }
 
     .music-container{
@@ -323,6 +325,13 @@ a{
     .social-media-icon{
         display: flex;
     }
+   .explore-btn{
+    font-size: 8px;
+   }
+   .back-icon{
+    margin-top: 9px; 
+   }
+
 }
 
 
