@@ -288,11 +288,10 @@ a{
         font-size: 0.65rem;
     }
 
-}
+} 
 /* iPhone 12 Pro */
 /* Common mobile devices */
-@media only screen 
-  and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     /* Your styles for common mobile devices here */
     .sidebar{
         width:150px;
@@ -314,21 +313,30 @@ a{
         width: 8rem;
         margin-left: 0.2rem;
     }
-
-    .music-container{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        width: fit-content; 
-    }
     .show-all-link{
         display: none;
     }
     .social-media-icon{
         display: flex;
     }
+    .nav-item{
+        margin-right: 3px;
+    }
    .explore-btn{
     font-size: 8px;
    }
+   .hide{
+    display: none;
+    }
+    .badge{
+    font-size: 0.65rem;
+    }
+    .sticky-nav-details{
+        display: flex;
+        align-items: center;
+        padding-right: 1rem;
+    }
+
 
 }
 
