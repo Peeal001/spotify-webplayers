@@ -177,43 +177,13 @@
                 </div>
             </footer>  
         </div>
-        <!-- Music Player -->
-
-       <!-- <div class="music-player">
-            <div class="album">
-            </div>
-
-            <div class="player">
-                <div class="player-controls">
-                    <img src="assets/player_icon1.png" class="player-control-icon" alt="">
-                    <img src="assets/player_icon2.png" class="player-control-icon" alt="">
-                    <img src="assets/player_icon3.png" class="player-control-icon" style="opacity: 1; height:2rem;" alt="">
-                    <img src="assets/player_icon4.png" class="player-control-icon" alt="">
-                    <img src="assets/player_icon5.png" class="player-control-icon" alt="">
-                </div>
-                <div class="playback-bar">
-                    <audio autoplay>
-                        <source src="assets/batpar-prem-147375.mp3" type="audio/ogg">
-                      </audio>
-                    <span class="curr-time">0:00</span>
-                    <input type="range" name="" id="" class="progress-bar" step="1">
-                    <span class="tot-time">0:00</span>
-                </div>
-            </div>
-
-
-            <div class="controls">
-                
-            </div> 
-
-        </div> -->
         <audio id="song">
             <source src="assets/song1.mp3" type="audio/mpeg">
         </audio>
         <div class="playlist" id="playlist"></div>
         <div class="music-player">
             <div class="album">
-                <p>Left</p>
+            
             </div>
             <div class="player">
                 <div class="player-controls">
@@ -246,9 +216,10 @@
         let currentTimeDisplay = document.getElementById('curr-time');
         let remainingTimeDisplay = document.getElementById('tot-time');
         let currentSongIndex = 0;
-        let playlist = ["assets/song1.mp3",
-        "assets/song2.mp3",
-        "assets/song3.mp3","assets/song4.mp3"];
+        let playlist = ["assets/song1.mp3","assets/song2.mp3","assets/song3.mp3",
+                    "assets/song4.mp3","assets/song5.mp3","assets/song6.mp3","assets/song7.mp3",
+                    "assets/song8.mp3","assets/song8.mp3","assets/song10.mp3","assets/song11.mp3",
+                    "assets/song12.mp3"];
 
         song.onloadedmetadata = function(){
             progress.max = song.duration;
@@ -283,14 +254,6 @@
                 playSong();
 
             }
-
-            // else{
-            //     song.play();
-            //     ctrlicon.classList.add("fa-circle-pause");
-            //     ctrlicon.classList.remove("fa-circle-play");
-            //     progress.style.setProperty('--progress-color', '#1bd760');
-
-            // }
         }
         function playNext() {
             currentSongIndex = (currentSongIndex + 1) % playlist.length;
