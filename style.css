@@ -13,6 +13,7 @@ body{
 }
 /* Sidebar design */
 .sidebar{
+    /* background-image: linear-gradient(94deg,#af2896,#509bf5); */
     background-color:#000000;
     width: 340px;
     border-radius: 1rem;
@@ -21,6 +22,7 @@ body{
 
 }
 .nav{
+    background-image: linear-gradient(94deg,#af2896,#509bf5); 
     background-color:#121212 ;
     border-radius: 1rem;
     display: flex;
@@ -50,7 +52,8 @@ body{
 
 /* Library design */
 .library{
-    background-color:#121212 ;
+    /* background-color:#121212 ; */
+    background-image: linear-gradient(94deg,#af2896,#509bf5);
     border-radius: 1rem;
     margin-top: 0.5rem;
     padding:0.5rem 0.7rem;
@@ -128,6 +131,7 @@ body{
 }
 /* Main container design */
 .main-container{
+    /* background-image: linear-gradient(94deg,#af2896,#509bf5); */
     background-color:#121212;
     flex: 1;
     border-radius: 1.25rem;
@@ -141,11 +145,12 @@ body{
     top: 0;
     display: flex;
     align-items: center;
+    background-image: linear-gradient(94deg,#af2896,#509bf5);
     background-color: #121212;
     /* background-image: linear-gradient(94deg,#af2896,#509bf5);  */
     justify-content: space-between;
     padding: 1rem 0 1rem 0;
-    border-radius: 0.7rem;
+    /* border-radius: 0.7rem; */
     z-index: 10;
     /* width: 100%; */
     
@@ -200,14 +205,23 @@ body{
 }
 
 .card{
+    
     background-color: #232323;
     width: 10rem;
     padding: 0.70rem;
     border-radius: 0.5rem;
     margin-right: 1.25rem; 
     margin-bottom: 1rem;
+    opacity: 0.5;
     
 }
+.card:hover{
+    opacity: 1;
+    background-color: #171717;
+} 
+
+
+
 .card img{
     height: 10rem;
     width: 100%;
@@ -250,33 +264,78 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Music Player design */
 .music-player{
     background-image: linear-gradient(94deg,#af2896,#509bf5); 
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 96%;
     height: 70px;
+    display: flex;
+    border-radius: 0.25rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 80px;
+    
 
 }
+.album{
+    width: 25%;
+}
+.player{
+    width: 50%;
+}
+.player-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.player-control-icon{
+    height: 1rem;
+    margin-right:2rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.playback-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+} 
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 1rem;
+    height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+.controls{
+    width: 25%;
+}
+
+
 a{
     text-decoration: none;
     color: #fff;
 }
+
 
 @media (max-width: 1000px) {
     .hide{
@@ -317,24 +376,10 @@ a{
     .social-media-icon{
         display: flex;
     }
-    /* .nav-item{
-        margin-right: 3px;
-    } */
-   .explore-btn{
-    font-size: 8px;
-   }
+
     .badge{
     font-size: 0.65rem;
     }
-    /* .sticky-nav-details{
-        display: flex;
-        align-items: center;
-        
-    } */
-    /* .sticky-nav{
-        padding-right: 0.3rem;
-    } */
-
 
 }
 
