@@ -1,0 +1,237 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #000000;
+    /* background-image: linear-gradient(94deg,#af2896,#509bf5);  */
+    overflow: hidden; 
+    color: white; 
+}
+.main{
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+/* Sidebar design */
+.sidebar{
+    background-color:#000000;
+    width: 340px;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    /* margin-bottom: 5rem; */
+
+}
+.nav{
+    background-color:#121212 ;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding:0.5rem 0.7rem;
+
+}
+.nav-option{
+    line-height: 40px; 
+    padding: 0.5rem;
+    opacity: 0.5;
+    
+}
+.nav-option:hover{
+    opacity: 1;
+    
+}
+.nav-option i{
+    font-size: 1.25rem;
+}
+.nav-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+/* Library design */
+.library{
+    background-color:#121212 ;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    padding:0.5rem 0.7rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+     
+}
+.lib-option img{
+    height: 1.25rem;
+    width: 1.25rem;
+    
+}
+.lib-box{
+    height: 17rem;
+    overflow: auto;  
+}
+.box{
+    height: 7rem;
+    background-color:#242424 ;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity:0.9;
+  
+}
+.badge{
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.2rem;
+    height: 2rem;
+    width: fit-content;
+}
+.dark-badge{
+    background-color: #000;
+    color: white;
+}
+/* Main container design */
+.main-container{
+    background-color:#121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    margin-left: 0.2rem;
+    padding: 0 1.5rem 0 1.5rem ;
+
+}
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #101010;
+    background-image: linear-gradient(94deg,#af2896,#509bf5); 
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+    border-radius: 1rem;
+}
+.sticky-nav-icon{
+    margin-left: 0.75rem;
+}
+.sticky-nav-details{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    
+}
+
+.nav-item{
+    margin-right: 1rem;
+}
+.sticky-nav-details i{
+    margin-right: 0.5rem;
+}
+.music-container{
+    background-color: #121212;
+}
+.music-container-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.music-category{
+    font-size: 1.25rem;
+}
+.music-category:hover{
+    text-decoration: underline;
+}
+.show-all-link{
+    font-size: 0.8rem;
+    opacity: 0.8;
+    
+}
+.show-all-link:hover{
+    text-decoration: underline;
+}
+
+/* Card deisgn */
+.music-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: #232323;
+    width: 10rem;
+    padding: 0.70rem;
+    border-radius: 0.5rem;
+    margin-right: 1.25rem; 
+    margin-bottom: 1rem;
+    
+}
+.card img{
+    height: 10rem;
+    width: 100%;
+    border-radius: 1rem;
+    
+
+}
+.box-title{
+    font-weight: 600;
+}
+
+.box-info{
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Music Player design */
+.music-player{
+    background-image: linear-gradient(94deg,#af2896,#509bf5); 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 1000px) {
+    .hide{
+        display: none;
+    }
+    .badge{
+        font-size: 0.65rem;
+    }
+
+    
+}
+
