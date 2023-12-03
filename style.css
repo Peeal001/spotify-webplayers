@@ -234,4 +234,37 @@ a{
 
     
 }
+/* iPhone 12 Pro */
+/* Common mobile devices */
+@media only screen 
+  and (max-width: 600px) {
+    /* Your styles for common mobile devices here */
+    .sidebar{
+        width:150px;
+    }
+    .box{
+        height: 14rem;
+
+    }
+    .lib-title{
+        font-size: 300px;
+    }
+    .lib-option a{
+        font-size: 11px;  
+    }
+    .icons{
+        display: none;
+    }
+    .sticky-nav{
+        padding-right: 2rem;
+        width: fit-content;
+    }
+    .music-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: fit-content;
+    }
+}
+
+
 
