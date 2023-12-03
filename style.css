@@ -147,25 +147,21 @@ body{
     padding: 1rem 0 1rem 0;
     border-radius: 0.7rem;
     z-index: 10;
-    width: 100%;
+    /* width: 100%; */
     
 }
 .sticky-nav-icon{
     margin-left: 0.75rem;
+    display: flex;
 }
 .sticky-nav-details{
     border: none;
     display: flex;
     align-items: center;
-    justify-content:center ;
+    justify-content:end ;
     width: 100%;
     
 }
-.back-icon{
-    margin-top: 9px;
-    width: 1.5rem;
-   }
-
 
 .nav-item{
     margin-right: 1rem;
@@ -327,9 +323,6 @@ a{
    .explore-btn{
     font-size: 8px;
    }
-   .hide{
-    display: none;
-    }
     .badge{
     font-size: 0.65rem;
     }
@@ -344,6 +337,4 @@ a{
 
 
 }
-
-
 
