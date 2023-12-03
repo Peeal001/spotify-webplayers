@@ -95,6 +95,7 @@ body{
     margin-top: 0.2rem;
     height: 2rem;
     width: fit-content;
+    color: #000;
 }
 .dark-badge{
     background-color: #000;
@@ -306,9 +307,9 @@ a{
     .lib-option a{
         font-size: 13px;  
     }
-    /* .icons{
+    .icons{
         display: none;
-    } */
+    }
     .card{
         width: 8rem;
         margin-left: 0.2rem;
@@ -327,9 +328,6 @@ a{
     }
    .explore-btn{
     font-size: 8px;
-   }
-   .back-icon{
-    margin-top: 9px; 
    }
 
 }
