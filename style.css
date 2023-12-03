@@ -2,7 +2,7 @@ body{
     font-family: sans-serif;
     margin: 0;
     background-color: #000000;
-    /* background-image: linear-gradient(94deg,#af2896,#509bf5);  */
+    /* background-image: linear-gradient(94deg,#af2896,#509bf5); */
     overflow: hidden; 
     color: white; 
 }
@@ -141,8 +141,8 @@ body{
     top: 0;
     display: flex;
     align-items: center;
-    /* background-color: #101010; */
-    background-image: linear-gradient(94deg,#af2896,#509bf5); 
+    background-color: #121212;
+    /* background-image: linear-gradient(94deg,#af2896,#509bf5);  */
     justify-content: space-between;
     padding: 1rem 0 1rem 0;
     border-radius: 0.7rem;
@@ -293,10 +293,10 @@ a{
 } 
 /* iPhone 12 Pro */
 /* Common mobile devices */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 667px) {
     /* Your styles for common mobile devices here */
     .sidebar{
-        width:165px;
+        width:150px;
     }
     .box{
         height: 14rem;
