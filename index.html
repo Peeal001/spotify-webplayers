@@ -175,18 +175,11 @@
                         <i class="fa-brands fa-facebook"></i>
                     </div>
                 </div>
-
-            </footer>
-          
+            </footer>  
         </div>
-
-
-
-
-
-
         <!-- Music Player -->
-        <div class="music-player">
+
+       <!-- <div class="music-player">
             <div class="album">
             </div>
 
@@ -204,19 +197,134 @@
                       </audio>
                     <span class="curr-time">0:00</span>
                     <input type="range" name="" id="" class="progress-bar" step="1">
-                    <span class="tot-title">3:30</span>
+                    <span class="tot-time">0:00</span>
                 </div>
             </div>
 
+
             <div class="controls">
                 
+            </div> 
+
+        </div> -->
+        <audio id="song">
+            <source src="assets/song1.mp3" type="audio/mpeg">
+        </audio>
+        <div class="playlist" id="playlist"></div>
+        <div class="music-player">
+            <div class="album">
+                <p>Left</p>
             </div>
+            <div class="player">
+                <div class="player-controls">
+                    <i onclick="playPrevious()" class="fa-solid fa-backward-step"></i>
+    
+                    <i onclick="playPause()" id="ctrlicon" class="fa-regular fa-circle-play" style="opacity: 1;"></i>
+    
+                    <i onclick="playNext()" class="fa-solid fa-forward-step"></i>
+    
+                </div>
+                <div class="playback-bar">
+                      
+                    <span id="curr-time">0:00</span>
+                    
+                    <input type="range" name="" id="progress-bar" class="progressbar" step="1">
+                    
+                    <span id="tot-time">0:00</span>
+                </div>
+            </div>
+            <div class="controls">
+                    
+            </div>
+        </div> 
+    </div> 
 
-        </div>
-        
-    </div>
+    <script>
+        let progress = document.getElementById('progress-bar');
+        let song = document.getElementById('song');
+        let ctrlicon = document.getElementById('ctrlicon');
+        let currentTimeDisplay = document.getElementById('curr-time');
+        let remainingTimeDisplay = document.getElementById('tot-time');
+        let currentSongIndex = 0;
+        let playlist = ["assets/song1.mp3",
+        "assets/song2.mp3",
+        "assets/song3.mp3","assets/song4.mp3"];
 
+        song.onloadedmetadata = function(){
+            progress.max = song.duration;
+            progress.value = song.currentTime;
 
+        }
+
+        function loadSong(songIndex){
+            song.src = playlist[songIndex];
+            song.load();
+            song.play();
+            
+
+        }
+
+        function playSong(){
+            song.play();
+            ctrlicon.classList.add("fa-circle-pause");
+            ctrlicon.classList.remove("fa-circle-play");
+            progress.style.setProperty('--progress-color', '#1bd760');
+        }
+
+        function playPause(){
+            if(ctrlicon.classList.contains("fa-circle-pause")){
+                song.pause();
+                ctrlicon.classList.remove("fa-circle-pause");
+                ctrlicon.classList.add("fa-circle-play");
+                progress.style.setProperty('--progress-color', 'white');
+                
+            }
+            else{
+                playSong();
+
+            }
+
+            // else{
+            //     song.play();
+            //     ctrlicon.classList.add("fa-circle-pause");
+            //     ctrlicon.classList.remove("fa-circle-play");
+            //     progress.style.setProperty('--progress-color', '#1bd760');
+
+            // }
+        }
+        function playNext() {
+            currentSongIndex = (currentSongIndex + 1) % playlist.length;
+            loadSong(currentSongIndex);
+        }
+
+        function playPrevious() {
+            currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+            loadSong(currentSongIndex);
+        }
+
+        if(song.play()){
+            setInterval(()=>{
+              progress.value = song.currentTime;
+              currentTimeDisplay.textContent = formatTime(song.currentTime);
+              remainingTimeDisplay.textContent = formatTime(song.duration - song.currentTime);
+            },500)
+        }
+        function formatTime(seconds) {
+            let minutes = Math.floor(seconds / 60);
+            let secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        progress.onchange = function(){
+            // song.play();
+            song.currentTime = progress.value;
+            // ctrlicon.classList.add("fa-circle-pause");
+            // ctrlicon.classList.remove("fa-circle-play");
+            playSong();
+
+        }
+    </script>
+    
     <script src="https://kit.fontawesome.com/c584c820c1.js" crossorigin="anonymous"></script>
     
 </body>
